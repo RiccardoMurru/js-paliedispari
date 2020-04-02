@@ -4,28 +4,28 @@
     Creare una funzione per capire se la parola inserita è palindroma
  */
 
-// var word = prompt('Inserisci una parola');
-// var reverseWord = '';
+var word = prompt('Inserisci una parola');
+var reverseWord = '';
 
-// // verifica se la parola è palindroma
-// if (palindromeWord(word) == word) {
-//     console.log('La parola ' + word + ' è palindroma.');   
-// } else {
-//     console.log('La parola ' + word + ' non è palindroma.');
+// verifica se la parola è palindroma
+if (palindromeWord(word) == word) {
+    console.log('La parola ' + word + ' è palindroma.');   
+} else {
+    console.log('La parola ' + word + ' non è palindroma.');
 
-// }
+}
 
-// // Definizione funzione 
+// Definizione funzione 
 
-// function palindromeWord (word) {
+function palindromeWord (word) {
 
-//     for (var i = word.length - 1; i >= 0; i--) {
-//     reverseWord += word[i];
+    for (var i = word.length - 1; i >= 0; i--) {
+    reverseWord += word[i];
 
-//     }   
+    }   
 
-//     return reverseWord;
-// }
+    return reverseWord;
+}
 
 
  /**
@@ -53,7 +53,7 @@ function numberGenerator (min, max){
 function numberEvenOdd (sum) {
     if (sum % 2 == 0) {
        var numberStatus = 'pari';
-    } else  if (sum % 2 != 0) {
+    } else {
         numberStatus = 'dispari';
     }
     return numberStatus;
