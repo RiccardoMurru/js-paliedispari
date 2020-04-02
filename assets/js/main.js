@@ -4,28 +4,28 @@
     Creare una funzione per capire se la parola inserita è palindroma
  */
 
-var word = prompt('Inserisci una parola');
-var reverseWord = '';
+// var word = prompt('Inserisci una parola');
+// var reverseWord = '';
 
-// verifica se la parola è palindroma
-if (palindromeWord(word) == word) {
-    console.log('La parola ' + word + ' è palindroma.');   
-} else {
-    console.log('La parola ' + word + ' non è palindroma.');
+// // verifica se la parola è palindroma
+// if (palindromeWord(word) == word) {
+//     console.log('La parola ' + word + ' è palindroma.');   
+// } else {
+//     console.log('La parola ' + word + ' non è palindroma.');
 
-}
+// }
 
-// Definizione funzione 
+// // Definizione funzione 
 
-function palindromeWord (word) {
+// function palindromeWord (word) {
 
-    for (var i = word.length - 1; i >= 0; i--) {
-    reverseWord += word[i];
+//     for (var i = word.length - 1; i >= 0; i--) {
+//     reverseWord += word[i];
 
-    }   
+//     }   
 
-return reverseWord;
-}
+//     return reverseWord;
+// }
 
 
  /**
@@ -38,3 +38,32 @@ return reverseWord;
   */
 
 
+var evenOdd = prompt('Scegli pari o dispari').toLowerCase();
+var numberPlayer = parseInt( prompt('Scegli un numero da 1 a 5') );
+var sum = numberPlayer + numberGenerator(1, 5);
+
+// Definizione funzione per generare numero random da 1 a 5
+function numberGenerator (min, max){
+    var numberNpc =  Math.floor ( Math.random () * (max - min) + min);
+    
+    return numberNpc;
+}
+
+// Definizione funzione per stabilire se somma è pari o dispari
+function numberEvenOdd (sum) {
+    if (sum % 2 == 0) {
+       var numberStatus = 'pari';
+    } else  if (sum % 2 != 0) {
+        numberStatus = 'dispari';
+    }
+    return numberStatus;
+}
+
+// Dichiarare il vincitore
+if (numberEvenOdd(sum) ===  evenOdd) {
+    console.log('Hai vinto: la somma è ' + sum + ' ' + numberEvenOdd(sum));
+
+} else {
+    console.log('Hai perso: la somma è ' + sum + ' ' + numberEvenOdd(sum));
+    
+}
