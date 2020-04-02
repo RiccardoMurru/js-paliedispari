@@ -8,7 +8,7 @@ var word = prompt('Inserisci una parola');
 var reverseWord = '';
 
 // verifica se la parola è palindroma
-if (palindromeWord(word) == word) {
+if (palindromeWord(word)) {
     console.log('La parola ' + word + ' è palindroma.');   
 } else {
     console.log('La parola ' + word + ' non è palindroma.');
@@ -24,7 +24,11 @@ function palindromeWord (word) {
 
     }   
 
-    return reverseWord;
+    if (reverseWord === word) {
+        return true;
+    }
+
+    return false;
 }
 
 
